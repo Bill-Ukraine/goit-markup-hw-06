@@ -537,35 +537,35 @@
             </li>
           </ul>
         </div>
-        <form
-          class="footer-form"
-          name="footer-form"
-          autocomplete="off"
-          novalidate
-        >
-          <label class="footer-subscribe-label" for="footer-subscribe"
-            >Subscribe</label
+        <div class="footer-form-container">
+          <form
+            class="footer-form"
+            name="footer-form"
+            autocomplete="off"
+            novalidate
           >
-          <div class="footer-subscribe-container">
-            <input
-              class="footer-subscribe-input"
-              type="email"
-              id="footer-subscribe"
-              placeholder="E-mail"
-              name="footer-subscribe"
-            />
-            <button class="subscribe-button" type="input">
-              Subscribe
-              <svg class="subscribe-icon">
-                <use
-                  href="./images/icon.svg#icon-subscribe"
-                  width="24"
-                  height="24"
-                ></use>
-              </svg>
-            </button>
-          </div>
-        </form>
+            <p class="footer-subscribe-name">Subscribe</p>
+            <div class="footer-subscribe-container">
+              <input
+                class="footer-subscribe-input"
+                type="email"
+                id="footer-subscribe"
+                placeholder="E-mail"
+                name="footer-subscribe"
+              />
+              <button class="subscribe-button" type="submit">
+                Subscribe
+                <svg class="subscribe-icon">
+                  <use
+                    href="./images/icon.svg#icon-subscribe"
+                    width="24"
+                    height="24"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -582,17 +582,15 @@
             ></use>
           </svg>
         </button>
-        <h2 class="modal-title">
-          Leave your contacts and we will call you back
-        </h2>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
         <form
           class="modal-form"
           name="contacts-form"
           autocomplete="off"
           novalidate
         >
-          <label class="modal-label-text" for="user-name">Name</label>
-          <div class="modal-label-container">
+          <label class="modal-label-text" for="user-name"
+            ><span class="modal-label-name">Name</span>
             <input
               class="input-modal"
               id="user-name"
@@ -606,27 +604,23 @@
                 height="12"
               ></use>
             </svg>
-          </div>
-
-          <label class="modal-label-text" for="user-phone">Phone</label>
-          <div class="modal-label-container">
+          </label>
+          <label class="modal-label-text" for="user-phone"
+            ><span class="modal-label-name">Phone</span>
             <input
               class="input-modal"
               id="user-phone"
               type="tel"
-              name="user-phone"
-            />
+              name="user-phone" />
             <svg class="modal-svg">
               <use
                 href="./images/icon.svg#icon-modal-phone"
                 width="12"
                 height="12"
-              ></use>
-            </svg>
-          </div>
-
-          <label class="modal-label-text" for="user-email">Email</label>
-          <div class="modal-label-container">
+              ></use></svg
+          ></label>
+          <label class="modal-label-text" for="user-email"
+            ><span class="modal-label-name">Email</span>
             <input
               class="input-modal"
               id="user-email"
@@ -640,18 +634,19 @@
                 height="12"
               ></use>
             </svg>
-          </div>
-
-          <label class="modal-label-text" for="user-comment">Comment</label>
-          <textarea
-            class="textarea-modal"
-            name="user-comment"
-            id="user-comment"
-            placeholder="Text input"
-          ></textarea>
+          </label>
+          <label class="modal-label-text" for="user-comment"
+            ><span class="modal-label-name">Comment</span>
+            <textarea
+              class="textarea-modal"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </label>
           <label class="modal-license-text" for="privacy-policy"
             >I accept the terms and conditions of the
-            <a href="">Privacy Policy</a>
+            <a class="privacy-policy-link" href="">Privacy Policy</a>
             <input
               class="modal-checkbox"
               id="privacy-policy"
