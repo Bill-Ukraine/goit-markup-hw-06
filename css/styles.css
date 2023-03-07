@@ -288,17 +288,16 @@ img {
   flex-wrap: wrap;
 }
 
-
 .textarea-modal {
   display: block;
   outline: none;
   width: 360px;
   height: 120px;
+  padding: 8px 16px;
   resize: none;
   background-color: var(--color-eleventh);
   border: 1px solid var(--color-twelfth);
   border-radius: 4px;
-  margin-bottom: 16px;
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -309,7 +308,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-thirteenth);
-  padding: 8px 0 0 16px;
 }
 
 .modal-checkbox {
@@ -318,6 +316,7 @@ img {
 
 .modal-checkbox-pseudo {
   position: absolute;
+  display: inline-block;
   left: -20px;
   bottom: 0;
   display: block;
@@ -326,9 +325,14 @@ img {
   border: 1.25px solid;
   border-radius: 2px;
   cursor: pointer;
-  transition-property: background-color, background-image;
+  transition-property: background-color, background-image, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox-pseudo:hover,
+.modal-checkbox-pseudo:focus-within{
+  border-color: var(--color-seventh);
 }
 
 .modal-checkbox:checked + .modal-checkbox-pseudo {
@@ -348,8 +352,12 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-ninth);
-  
+
   margin: 0 auto 24px;
+}
+
+.modal-license-text:focus-within {
+  border-color: var(--color-seventh);
 }
 
 .modal-label-text {
@@ -359,6 +367,10 @@ img {
   letter-spacing: 0.04em;
   color: var(--color-eighth);
   margin-bottom: 8px;
+}
+
+.modal-label-area {
+  margin-bottom: 16px;
 }
 
 .modal-label-name {
@@ -375,7 +387,6 @@ img {
   fill: var(--color-first);
 }
 
-
 .input-modal {
   width: 360px;
   height: 40px;
@@ -388,18 +399,16 @@ img {
 
 .input-modal:hover,
 .input-modal:focus {
-  color: var(--color-fifth);
   border-color: var(--color-fifth);
 }
 
 .input-modal:hover + .modal-svg,
 .input-modal:focus + .modal-svg {
- fill: var(--color-fifth);
+  fill: var(--color-fifth);
 }
 
-
 .textarea-modal:hover,
-.textarea-modal:focus{
+.textarea-modal:focus {
   border-color: var(--color-fifth);
 }
 
@@ -879,8 +888,7 @@ img {
   fill: currentColor;
 }
 
-.footer-subscribe-container {
+.footer-form {
   display: flex;
   gap: 24px;
-  margin-top: 16px;
 }
